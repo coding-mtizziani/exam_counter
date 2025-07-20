@@ -15,10 +15,13 @@ To set up and run this project, follow these steps:
 
 1.  **Clone the Repository (if applicable):**
     If the project is hosted on a version control system (e.g., GitHub), clone it to your local machine:
+    
     ```bash
     git clone https://github.com/coding-mtizziani/exam_counter.git
     cd exam_conter
     ```
+
+    or download the repository as a ZIP file and extract it to your desired location from [github](https://github.com/coding-mtizziani/exam_counter).
 
 2.  **Create and Activate a Virtual Environment (Recommended):**
     It's best practice to use a virtual environment to manage project dependencies separately from your system's global Python packages.
@@ -103,8 +106,7 @@ This program is designed modularly, allowing the timer component and the test st
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
 
 ## Issues
-If you encounter any issues or bugs, please report them in the [Issues](https://github
-.com/yourusername/exam_test_counter/issues) section of the repository.
+If you encounter any issues or bugs, please report them in the [Issues](https://github.com/coding-mtizziani/exam_counter/issues) section of the repository.
 ## Contact
 For any questions or feedback, you can reach me at [coding.maik.tizziani@gmail.com](mailto:coding.maik.tizziani@gmail.com).
 ## License
