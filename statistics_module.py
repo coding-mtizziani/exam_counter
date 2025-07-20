@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 from typing import Dict, Any, List, Optional
 
-def run_statistics() -> None:
+def run_statistics(save_to_file: str="") -> None:
     """
     Collects results from the user, calculates statistics, and saves them.
     """
@@ -58,7 +58,11 @@ def run_statistics() -> None:
         "overall_percentage": round(overall_percentage, 2)
     }
 
-    save_results(statistic_data)
+    if save_to_file:
+        save_results(statistic_data, save_to_file)
+    else:
+        save_results(statistic_data)
+    
     print("--- Statistics Finished ---") # Changed
 
 def save_results(data: Dict[str, Any], filename: str = 'stats.json') -> None:
@@ -97,7 +101,7 @@ def save_results(data: Dict[str, Any], filename: str = 'stats.json') -> None:
 
 # No change needed to the main guard in this module
 if __name__ == "__main__":
-    run_statistics()
+    run_statistics(save_to_file='sample_stats.json')  # Example usage
 
 
 # Copyright 2025 Maik Tizziani
