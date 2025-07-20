@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import timer_module
 import statistics_module
 import plot_results_module 
