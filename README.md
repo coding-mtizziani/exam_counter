@@ -15,7 +15,7 @@ To set up and run this project, follow these steps:
 
 1.  **Clone the Repository (if applicable):**
     If the project is hosted on a version control system (e.g., GitHub), clone it to your local machine:
-    
+
     ```bash
     git clone https://github.com/coding-mtizziani/exam_counter.git
     cd exam_conter
@@ -52,6 +52,13 @@ To set up and run this project, follow these steps:
     This command will install all necessary packages (like `plotext`, `keyboard`, `winsound` etc.) into your virtual environment.
 
 ---
+
+## Starting the Program
+To run the program, ensure your virtual environment is activated and execute the following command in your terminal:
+
+```bash
+python exam_counter.py
+```
 
 ## Functionalities
 
