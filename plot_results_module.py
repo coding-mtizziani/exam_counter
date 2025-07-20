@@ -108,7 +108,7 @@ def run_plot_feature(filename: str = 'stats.json') -> None:
     print("--- Plotting finished ---")
 
 if __name__ == "__main__":
-    run_plot_feature()
+    run_plot_feature("sample_stats.json")
 
 
 
