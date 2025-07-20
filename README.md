@@ -118,3 +118,14 @@ If you encounter any issues or bugs, please report them in the [Issues](https://
 For any questions or feedback, you can reach me at [coding.maik.tizziani@gmail.com](mailto:coding.maik.tizziani@gmail.com).
 ## License
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
+
+## Requirements
+This project requires Python 3.6 or higher. It is recommended to use a virtual environment to manage dependencies.
+
+We recommend using the latest version of Python for compatibility and security reasons.
+
+## Dependencies
+This project requires the following Python packages:
+- `plotext`: For console plotting.
+- `keyboard`: For keyboard event handling.
+- `winsound`: For sound notifications (Windows only).
