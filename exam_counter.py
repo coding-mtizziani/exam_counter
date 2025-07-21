@@ -5,15 +5,15 @@ import statistics_module
 import plot_results_module 
 
 def main():
-    print("Welcome to the Test Application!") # Changed
+    print("Welcome to the Test Application!")
     
     timer_module.run_timer_application()
     
     statistics_module.run_statistics()
     
-    plot_results_module.run_plot_feature() # Using the plotext module as confirmed
+    plot_results_module.run_plot_feature()
     
-    print("\nApplication finished.") # Changed
+    print("\nApplication finished.")
 
 if __name__ == "__main__":
     main()

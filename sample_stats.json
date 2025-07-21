@@ -1,0 +1,30 @@
+[
+    {
+        "timestamp": "2025-07-20T14:33:29.390198",
+        "total_questions": 40,
+        "given_answers": 20,
+        "correct_answers": 20,
+        "overall_percentage": 50.0
+    },
+    {
+        "timestamp": "2025-07-20T14:33:50.134399",
+        "total_questions": 40,
+        "given_answers": 30,
+        "correct_answers": 28,
+        "overall_percentage": 70.0
+    },
+    {
+        "timestamp": "2025-07-20T14:34:04.071515",
+        "total_questions": 40,
+        "given_answers": 40,
+        "correct_answers": 37,
+        "overall_percentage": 92.5
+    },
+    {
+        "timestamp": "2025-07-21T08:27:18.928991",
+        "total_questions": 40,
+        "given_answers": 30,
+        "correct_answers": 20,
+        "overall_percentage": 50.0
+    }
+]
