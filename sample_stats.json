@@ -19,5 +19,12 @@
         "given_answers": 40,
         "correct_answers": 37,
         "overall_percentage": 92.5
+    },
+    {
+        "timestamp": "2025-07-21T08:27:18.928991",
+        "total_questions": 40,
+        "given_answers": 30,
+        "correct_answers": 20,
+        "overall_percentage": 50.0
     }
 ]
