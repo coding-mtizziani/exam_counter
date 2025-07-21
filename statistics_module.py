@@ -12,42 +12,42 @@ def run_statistics(save_to_file: str="") -> None:
     total_questions: Optional[int] = None
     while total_questions is None:
         try:
-            user_input = input("Enter total number of questions: ") # Changed
+            user_input = input("Enter total number of questions: ")
             total_questions = int(user_input)
             if total_questions <= 0:
-                print("Please enter a positive whole number.") # Changed
+                print("Please enter a positive whole number.")
                 total_questions = None
         except ValueError:
-            print("Invalid input. Please enter a whole number.") # Changed
+            print("Invalid input. Please enter a whole number.")
 
     given_answers: Optional[int] = None
     while given_answers is None:
         try:
-            user_input = input("Enter number of answered questions: ") # Changed
+            user_input = input("Enter number of answered questions: ")
             given_answers = int(user_input)
             if given_answers < 0 or given_answers > total_questions:
-                print(f"Number of answered questions cannot be negative or exceed {total_questions}.") # Changed
+                print(f"Number of answered questions cannot be negative or exceed {total_questions}.")
                 given_answers = None
         except ValueError:
-            print("Invalid input. Please enter a whole number.") # Changed
+            print("Invalid input. Please enter a whole number.")
 
     correct_answers: Optional[int] = None
     while correct_answers is None:
         try:
-            user_input = input("Enter number of correct answers: ") # Changed
+            user_input = input("Enter number of correct answers: ")
             correct_answers = int(user_input)
             if correct_answers < 0 or correct_answers > given_answers:
-                print(f"Number of correct answers cannot be negative or exceed {given_answers}.") # Changed
+                print(f"Number of correct answers cannot be negative or exceed {given_answers}.")
                 correct_answers = None
         except ValueError:
-            print("Invalid input. Please enter a whole number.") # Changed
+            print("Invalid input. Please enter a whole number.")
 
     # Calculate overall percentage. Unanswered questions count as incorrect.
     # Total correct answers relative to total possible questions.
     overall_percentage = (correct_answers / total_questions) * 100 if total_questions > 0 else 0
 
-    print(f"\n{given_answers} out of {total_questions} questions answered, {correct_answers} correct. " # Changed
-          f"This is an overall result of {overall_percentage:.2f}%") # Changed
+    print(f"\n{given_answers} out of {total_questions} questions answered, {correct_answers} correct. "
+          f"This is an overall result of {overall_percentage:.2f}%")
 
     # Prepare data for saving
     statistic_data: Dict[str, Any] = {
@@ -63,7 +63,7 @@ def run_statistics(save_to_file: str="") -> None:
     else:
         save_results(statistic_data)
     
-    print("--- Statistics Finished ---") # Changed
+    print("--- Statistics Finished ---")
 
 def save_results(data: Dict[str, Any], filename: str = 'stats.json') -> None:
     """
@@ -81,13 +81,13 @@ def save_results(data: Dict[str, Any], filename: str = 'stats.json') -> None:
                 results = json.load(f)
             if not isinstance(results, list):
                 # If file exists but is not a list, reset it (or handle error)
-                print(f"Warning: '{filename}' exists but is not a valid JSON list. Starting with new data.") # Changed
+                print(f"Warning: '{filename}' exists but is not a valid JSON list. Starting with new data.")
                 results = []
         except json.JSONDecodeError:
-            print(f"Error decoding JSON from '{filename}'. File might be corrupted. Starting with new data.") # Changed
+            print(f"Error decoding JSON from '{filename}'. File might be corrupted. Starting with new data.")
             results = []
         except IOError as e:
-            print(f"Error reading file '{filename}': {e}. Starting with new data.") # Changed
+            print(f"Error reading file '{filename}': {e}. Starting with new data.")
             results = []
 
     results.append(data)
@@ -95,13 +95,15 @@ def save_results(data: Dict[str, Any], filename: str = 'stats.json') -> None:
     try:
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=4)
-        print(f"Results saved to '{filename}'.") # Changed
+        print(f"Results saved to '{filename}'.")
     except IOError as e:
-        print(f"Error saving results to '{filename}': {e}") # Changed
+        print(f"Error saving results to '{filename}': {e}")
 
-# No change needed to the main guard in this module
+    input("Press Enter to continue...") 
+
+
 if __name__ == "__main__":
-    run_statistics(save_to_file='sample_stats.json')  # Example usage
+    run_statistics(save_to_file='sample_stats.json')
 
 
 # Copyright 2025 Maik Tizziani
