@@ -54,7 +54,7 @@ def run_timer_application() -> None:
     last_print_time = 0
     warning_sound_played = False
     
-    print("\nStarting countdown... (Press Alt+Q to stop prematurely)") # Changed
+    print("\nStarting countdown... (Press Alt+Q to stop prematurely)")
 
     abort_event = threading.Event()
 
@@ -70,7 +70,7 @@ def run_timer_application() -> None:
     try:
         while remaining_seconds >= 0:
             if abort_event.is_set():
-                print("\nTimer terminated prematurely by key press.") # Changed
+                print("\nTimer terminated prematurely by key press.")
                 break
 
             current_time = time.time()
@@ -88,7 +88,7 @@ def run_timer_application() -> None:
 
                 # Warning
                 if warning_minutes is not None and remaining_seconds == warning_threshold_seconds and not warning_sound_played:
-                    print(f"\nWarning: {warning_minutes} minutes remaining!") # Changed
+                    print(f"\nWarning: {warning_minutes} minutes remaining!")
                     play_sound(1000, 200) # Short beep
                     play_sound(1000, 200) # Another short beep
                     warning_sound_played = True
@@ -98,7 +98,7 @@ def run_timer_application() -> None:
             time.sleep(1) # Sleep for 1 second, but allow keyboard input during this
             remaining_seconds -= 1
 
-        print("\n--- Time EXPIRED! (Countdown finished) ---") if not abort_event.is_set() else None # Changed
+        print("\n--- Time EXPIRED! (Countdown finished) ---") if not abort_event.is_set() else None
         if abort_event.is_set():
             play_sound(500, 150) # Short beep for abort
         else:
@@ -108,10 +108,10 @@ def run_timer_application() -> None:
                 time.sleep(0.1)
 
     except KeyboardInterrupt:
-        print("\n--- Time EXPIRED! (Aborted) ---") # Changed
+        print("\n--- Time EXPIRED! (Aborted) ---")
         play_sound(500, 150) # Short beep for abort
     finally:
-        print("\nCountdown finished (prematurely)." if abort_event.is_set() or "KeyboardInterrupt" in locals() else "\nCountdown finished.") # Changed
+        print("\nCountdown finished (prematurely)." if abort_event.is_set() or "KeyboardInterrupt" in locals() else "\nCountdown finished.")
         # Clean up hotkey if thread is still running and not explicitly stopped by abort_event
         if abort_listener_thread.is_alive():
             keyboard.remove_hotkey('alt+q')
